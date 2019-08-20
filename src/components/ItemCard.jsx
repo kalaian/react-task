@@ -4,34 +4,37 @@ import styled from "styled-components";
 class ItemCard extends Component {
   state = { isToggled: false };
 
+  convertToDate = date => {
+    return new Date(1000 * date).toDateString();
+  };
+
   render() {
     return (
       <StyledItemCard isToggled={this.state.isToggled}>
-        <div class="label">
+        <div className="label">
           <p>company: {this.props.company_name}</p>
-          <span
+          <div
             className="show-more"
             onClick={() => this.setState({ isToggled: true })}
           >
             Show more
-          </span>
-          <span
+          </div>
+          <div
             className="show-less"
             onClick={() => this.setState({ isToggled: false })}
           >
             Show less
-          </span>
+          </div>
         </div>
-        <div class="container">
-          <div class="content">
-            <h2 class="title">Name company</h2>
-            <div class="body-text">
-              are delivered with the same high quality as decades ago are
-              delivered with the same high quality as decades ago are delivered
-              with the same high quality as decades ago are delivered with the
-              same high quality as decades ago are delivered with the same high
-              quality as decades ago
-            </div>
+        <div className="container">
+          <div className="content">
+            <h2 className="title">{this.props.title}</h2>
+            <p>location: {this.props.location_city}</p>
+            <p>publish date: {this.convertToDate(this.props.publish_date)}</p>
+            <p>contact name: {this.props.contact_name}</p>
+            <p>id: {this.props.id}</p>
+            <p>comments: {this.props.comments}</p>
+            <div className="body-text">{this.props.description}</div>
           </div>
         </div>
       </StyledItemCard>
@@ -42,15 +45,15 @@ const StyledItemCard = styled.div`
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  height: ${props => (props.isToggled ? "500px" : "300px")};
+  height: ${props => (props.isToggled ? "500px" : "150px")};
   margin: 20px;
   padding: 0 20px;
   position: relative;
   text-align: center;
-  width: 260px;
-
+  width: 390px;
   position: relative;
   display: inline-block;
+
   .container {
     display: ${props => (props.isToggled ? "block" : "none")};
   }

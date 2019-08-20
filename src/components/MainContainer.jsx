@@ -12,7 +12,7 @@ class MainContainer extends Component {
       <MainWrapper>
         <Navbar />
         <div className="title-container">
-          <h1>Projects</h1>
+          <h1>Progress React Task</h1>
         </div>
         {this.state.data.map(data => (
           <ItemCard {...data} />
