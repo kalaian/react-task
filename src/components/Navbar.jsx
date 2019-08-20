@@ -31,6 +31,7 @@ const StyledNavbar = styled.div`
   width: 100%;
   box-sizing: border-box;
   top: 0;
+  z-index: 1;
 
   .navbar-container {
     display: flex;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import data from "../data.json";
 import Navbar from "./Navbar";
+import ItemCard from "./ItemCard";
 import styled from "styled-components";
 
 class MainContainer extends Component {
@@ -13,6 +14,9 @@ class MainContainer extends Component {
         <div className="title-container">
           <h1>Projects</h1>
         </div>
+        {this.state.data.map(data => (
+          <ItemCard {...data} />
+        ))}
       </MainWrapper>
     );
   }
@@ -20,8 +24,6 @@ class MainContainer extends Component {
 const MainWrapper = styled.div`
   background-image: linear-gradient(to right, #d4a4ea, #02f);
   background-size: cover;
-  width: 100%;
-  height: 100vh;
   text-align: center;
 
   h1 {
