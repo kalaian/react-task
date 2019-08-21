@@ -11,10 +11,10 @@ class MainContainer extends Component {
     window.onscroll = () => {
       const offset = document.documentElement.scrollTop + window.innerHeight;
       const height = document.documentElement.offsetHeight;
-      const secondBatchOfData = data.projects.slice(21, 44);
+      const secondBatchOfData = data.projects.slice(21, data.projects.length);
 
       if (offset === height) {
-        if (this.state.data.length < 44) {
+        if (this.state.data.length < 43) {
           this.setState({
             data: this.state.data.concat(secondBatchOfData)
           });
