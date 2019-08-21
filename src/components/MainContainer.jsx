@@ -5,7 +5,23 @@ import ItemCard from "./ItemCard";
 import styled from "styled-components";
 
 class MainContainer extends Component {
-  state = { data: data.projects };
+  state = { data: data.projects.slice(0, 20) };
+
+  componentDidMount() {
+    window.onscroll = () => {
+      const offset = document.documentElement.scrollTop + window.innerHeight;
+      const height = document.documentElement.offsetHeight;
+      const secondBatchOfData = data.projects.slice(21, 44);
+
+      if (offset === height) {
+        if (this.state.data.length < 44) {
+          this.setState({
+            data: this.state.data.concat(secondBatchOfData)
+          });
+        }
+      }
+    };
+  }
 
   render() {
     return (

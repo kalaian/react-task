@@ -30,10 +30,10 @@ class ItemCard extends Component {
           <div className="content">
             <h2 className="title">{this.props.title}</h2>
             <p>location: {this.props.location_city}</p>
-            <p>publish date: {this.convertToDate(this.props.publish_date)}</p>
             <p>contact name: {this.props.contact_name}</p>
             <p>id: {this.props.id}</p>
             <p>comments: {this.props.comments}</p>
+            <p>publish date: {this.convertToDate(this.props.publish_date)}</p>
             <div className="body-text">{this.props.description}</div>
           </div>
         </div>
