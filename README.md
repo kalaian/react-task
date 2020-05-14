@@ -1,7 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Part 1
-
 Build a SPA application that visualizes the data from the JSON attached with the following requirements:
 
 - Visualize the list from the attached JSON.
