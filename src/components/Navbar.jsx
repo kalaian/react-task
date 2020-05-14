@@ -6,7 +6,7 @@ class Navbar extends Component {
     return (
       <StyledNavbar>
         <div className="navbar-container">
-          <div className="logo">Progress React Task</div>
+          <div className="logo">React Task</div>
           <ul>
             <a>
               <li>Home</li>

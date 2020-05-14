@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Build a SPA application that visualizes the data from the JSON attached with the following requirements:
 
-- Visualize the list from the attached JSON, loading the data from API is a plus.
-- Visualize the data in scrollable container. Infinite scrolling is a plus.
+- Visualize the list from the attached JSON.
+- Visualize the data in scrollable container.
 - The header and the side navigation have to be visible at all time when scrolling.
 - Add expand/collapse functionality for the item’s details.
 - Feel free to make your UI/UX design.
